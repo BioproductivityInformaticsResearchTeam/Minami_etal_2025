@@ -15,5 +15,5 @@ salmon_PDMA_RNA-seq.py: Python script used for RNA-seq read mapping with salomn 
 
 U-test.Rmd: R script (mrkdown) used to run Mann-Whitney U test about geographic distribution of the Brachypodium ecotypes
 
-Minami_etal_BdTOM1_ecotype_allele_latlong.xlsx: Latitude and longitude data of the Brachypodium ecotypes
+Minami_etal_BdTOM1_ecotype_allele_latlong.xlsx: Latitude and longitude data of the Brachypodium ecotypes 
 
