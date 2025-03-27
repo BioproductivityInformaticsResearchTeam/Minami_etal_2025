@@ -1,0 +1,58 @@
+---
+title: "U-test"
+author: "Keiichi_Mochida"
+date: "2024-08-15"
+output: html_document
+---
+
+```{r}
+library(readxl)
+
+# Excel file import
+file_path <- "Minami_etal_BdTOM1_ecotype_allele_latlong.xlsx"  
+data <- read_excel(file_path, sheet = "Long")
+
+# delete "Bd21-3" and "Bd21" in "inbredline" column
+data_clean <- subset(data, !(Inbredline %in% c("Bd21-3", "Bd21")))
+
+table(data_clean$type)
+```
+```{r}
+boxplot(`10` ~ as.factor(type), data = data_clean,
+        main = "Group comparison by type",
+        xlab = "Type", ylab = "Longitude")
+```
+```{r}
+#Mann-Whitney U test
+result_long <- wilcox.test(`10` ~ type, data = data_clean, alternative = "two.sided")
+print(result_long)
+```
+
+```{r}
+# Excel file import
+file_path <- "Minami_etal_BdTOM1_ecotype_allele_latlong.xlsx"  
+data2 <- read_excel(file_path, sheet = "Lat")
+
+# delete "Bd21-3" and "Bd21" in "inbredline" column
+data_clean2 <- subset(data2, !(Inbredline %in% c("Bd21-3", "Bd21")))
+
+table(data_clean2$type)
+```
+```{r}
+boxplot(`10` ~ as.factor(type), data = data_clean2,
+        main = "Group comparison by type",
+        xlab = "Type", ylab = "Latitude")
+```
+```{r}
+#Mann-Whitney U test
+result_lat <- wilcox.test(`10` ~ type, data = data_clean2, alternative = "two.sided")
+print(result_lat)
+```
+
+
+
+
+
+
+
+
