@@ -13,7 +13,9 @@ Koz4_Bd21.Rmd:R script (mrkdown) used to run rQTL and generte Supplementary Fig.
 
 salmon_PDMA_RNA-seq.py: Python script used for RNA-seq read mapping with salomn to generate read counts/TPM-based gene expression dataset, which was original data for Fig5e and Fig5f. 
 
-U-test.Rmd: R script (mrkdown) used to run Mann-Whitney U test about geographic distribution of the Brachypodium ecotypes
+U-test.Rmd: R script (mrkdown) used to run Wilcoxon rank-sum U test about geographic distribution of the Brachypodium ecotypes
 
 Minami_etal_BdTOM1_ecotype_allele_latlong.xlsx: Latitude and longitude data of the Brachypodium ecotypes 
 
+Violin_plot_and_Wilcoxon.R: R script (mrkdown) used to generate the violinplots represented in Fig.4a and Wilcoxon rank-sum U test.
+test 
